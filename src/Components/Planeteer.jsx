@@ -2,9 +2,13 @@ import React from 'react';
 
 class Planeteer extends React.Component {
 
+  state = {
+    clicked: false
+  }
+
   clickHandler = (e) => {
     console.log(e.target)
-
+    this.setState(prevState => ({clicked: !prevState.clicked}))
   }
 
   //"CONDITIONALLY RENDER BIO OR QUOTE"
